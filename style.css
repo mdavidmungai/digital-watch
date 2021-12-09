@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Digital Seven';
+    src: url('digital/digital-7.woff2') format('woff2');
+}
+
+:root {
+    --digital-font: 'Digital Seven';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(17, 16, 16);
+}
+
+.wrap {
+    margin: auto;
+    font-family: var(--digital-font);
+    text-align: right;
+    border: 1px solid crimson;
+    padding: 16px;
+    box-shadow: inset 0 0 12px 1px rgba(220, 20, 60, 0.5);
+}
+
+.time, #hours, #minutes, #seconds {
+    display: flex;
+    align-items: center;
+}
+
+.time {
+    font-size: 72px;
+}
+
+.char1, .char2 {
+    position: relative;
+    width: 35px;
+    height: 70px;
+    text-align: right;
+}
+
+.live-char, .dead-char {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: right;
+    width: 100%;
+}
+
+.live-char {
+    z-index: 3;
+    color: crimson;
+}
+
+.dead-char {
+    z-index: 2;
+    color: rgba(220, 20, 60, 0.1);
+}
+
+.separator {
+    color: crimson;
+    padding: 0 8px;
+}
+
+.date {
+    font-size: 24px;
+    color: crimson;
+}
